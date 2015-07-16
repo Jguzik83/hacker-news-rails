@@ -1,0 +1,5 @@
+<ol id='post-list'>
+  <% @posts.each do |post| %>
+  <%= render 'post', post: post %>
+  <% end %>
+</ol>

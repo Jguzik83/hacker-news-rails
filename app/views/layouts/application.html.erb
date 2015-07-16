@@ -12,19 +12,27 @@
       <header id='nav_bar'>
         <a href='http://www.ycombinator.com' id='y'>Y</a>
         <a href='<%= root_path %>' id='hacker_news'>Hacker News</a>
-        <a href='#' class='nav_link' id='first_link'>welcome</a>
-        <a href='#' class='nav_link'>new</a>
+        <a href='<%= welcome_path %>' class='nav_link' id='first_link'>welcome</a>
+        <a href='<%= newest_path %>' class='nav_link'>new</a>
         <a href='#' class='nav_link'>threads</a>
         <a href='#' class='nav_link'>comments</a>
         <a href='#' class='nav_link'>show</a>
         <a href='#' class='nav_link'>ask</a>
         <a href='#' class='nav_link'>jobs</a>
-        <a href='#' class='nav_link' id='last_link'>submit</a>
-        <a href='login' class='nav_link' id='login'>login</a>
+        <a href='<%= new_post_path %>' class='nav_link' id='last_link'>submit</a>
+        <% if logged_in? %>
+          <a href='<%= logout_path %>' class='nav_link' id='logout'> Logout</a>
+          <a href='#' class='nav_link' id='user_profile'>User | </a>
+          <% else %>
+        <a href='<%= login_path %>' class='nav_link' id='login'>login</a>
+        <% end %>
       </header>
+
+
 
       <%= yield %>
     </div>
   </center>
+
 </body>
 </html>

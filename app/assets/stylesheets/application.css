@@ -72,6 +72,16 @@ center {
   float: right;
 }
 
+#logout {
+  border: none;
+  float: right;
+}
+
+#user_profile {
+  float: right;
+  border: none;
+}
+
 #sign_up_form {
   float: left;
   display: block;
@@ -84,4 +94,33 @@ center {
 
 #log_sign {
   float: left;
+}
+
+#post-list {
+  text-align: start;
+}
+
+#small_line {
+  list-style-type: none;
+  font-size: 12px;
+  color: #828282;
+}
+
+li {
+  list-style-type: none;
+}
+
+#top_line {
+  font-size: 15px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#post_details {
+  text-align: start;
+  padding-top: 15px;
+}
+
+#welcome_page {
+  width: 50%;
+  text-align: start;
 }
