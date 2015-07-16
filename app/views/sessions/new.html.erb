@@ -1,0 +1,42 @@
+<div id='log_sign'>
+<div id='log_in_form'>
+  <h1>Log In</h1>
+
+  <div>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.submit 'Log In' %>
+  <% end %>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<!-- I know this is ugly, but it was a quick fix for some CSS problem I caused for myself using center -->
+<%= link_to 'Forgot Your Password?', root_path %>
+<br><br><br>
+
+<div id='sign_up_form'>
+  <h1>Create Account</h1>
+
+  <div>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.submit 'Sign Up' %>
+  <% end %>
+  </div>
+</div>
+</div>

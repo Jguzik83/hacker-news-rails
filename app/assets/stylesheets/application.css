@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#y {
+  background-color: #ff6600;
+  color: black;
+  border: solid 1px white;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nav_bar {
+  background-color: #ff6600;
+  padding: 4px;
+  font-size: 10pt;
+  width: 85%;
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: left;
+}
+
+.nav_link {
+  color: black;
+  border-left: solid 1px black;
+}
+
+#hacker_news {
+  color: black;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+#first_link {
+  border-left: none;
+}
+
+body {
+  height: 1262px;
+  width: 1180px;
+}
+
+center {
+  height: 1072px;
+  width: 1180px;
+  background-color: #f6f6ef;
+  float: left;
+
+}
+
+#main_body {
+  width: 85%;
+}
+
+#login {
+  text-align: right;
+  border: none;
+  float: right;
+}
+
+#sign_up_form {
+  float: left;
+  display: block;
+}
+
+#log_in_form {
+  float: left;
+  display: block;
+}
+
+#log_sign {
+  float: left;
+}
