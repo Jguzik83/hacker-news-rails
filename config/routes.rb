@@ -4,12 +4,16 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'posts#index'
-  resources :users, :posts, :comments
+  resources :users, :posts
+  resources :comments
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#delete'
   get 'welcome' => 'welcome#index'
   get 'newest' => 'posts#newest'
+  resources :posts do
+    resources :comments
+  end
 
 
   # Example of regular route:

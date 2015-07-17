@@ -2,8 +2,9 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    @user = User.find_by(id: session[:user_id])
+    @comments = Comment.all
   end
+
 
   def new
     @post = Post.new
@@ -28,6 +29,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @comments = @post.comments
+
   end
 
   def edit

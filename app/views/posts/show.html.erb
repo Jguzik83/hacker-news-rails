@@ -1,3 +1,17 @@
+<h1>Show the comments for the individual post</h1>
+<div id='add_comment_button'>
+  <% if logged_in? %>
+  <%= link_to 'Add a comment', new_post_comment_path(@post) %>
+  <% end %>
+</div>
+
 <div id='post_details'>
   <%= @post.text %>
+</div>
+<div id='indiv_comments'>
+  <% @comments.map do |comment| %>
+    <ol id='comment_list'>
+      <%= comment.text %>
+    </ol>
+  <% end %>
 </div>

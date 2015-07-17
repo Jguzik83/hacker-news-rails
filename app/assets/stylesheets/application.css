@@ -118,9 +118,27 @@ li {
 #post_details {
   text-align: start;
   padding-top: 15px;
+  font-weight: bold;
+
 }
 
 #welcome_page {
   width: 50%;
+  text-align: start;
+}
+
+#comment_line {
+  text-align: start;
+
+}
+
+#small_comment_line {
+  list-style-type: none;
+  font-size: 12px;
+  color: #828282;
+  text-align: start;
+}
+
+#comment_list {
   text-align: start;
 }
