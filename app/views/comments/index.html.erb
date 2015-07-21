@@ -1,5 +1,6 @@
 <h1>Show All Comments</h1>
 <ol id='comment-list'>
+<!-- Use <%= render @comments  %> -->
   <% @comments.each do |comment| %>
   <%= render 'comment', comment: comment %>
   <% end %>

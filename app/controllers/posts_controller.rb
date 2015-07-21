@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
 
   def index
+    #ZM: What happens if you have 1,000,000 posts? 
+    # With 1,000,000 comments? 
+    #ZM: Start thinking about using .limit(50)
     @posts = Post.all
     @comments = Comment.all
   end

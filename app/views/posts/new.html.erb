@@ -1,5 +1,6 @@
 <h1>form for a new post</h1>
 <div id='create_post'>
+<!-- If your @user is a hydrated instance, and your @post is empty, you have no need to specify the url and method with a form_for -->
   <%= form_for [@user, @post], url: posts_path, method: 'post' do |f| %>
     <div>
       <%= f.label :title %>

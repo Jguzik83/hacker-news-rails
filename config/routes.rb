@@ -3,14 +3,21 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+
+
+  #ZM: See all these comments... that Rails did for you. You should delete them
+  # Once you have figured out how to do routes.
   root 'posts#index'
   resources :users, :posts
   resources :comments
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#delete'
+
   get 'welcome' => 'welcome#index'
   get 'newest' => 'posts#newest'
+
   resources :posts do
     resources :comments
   end

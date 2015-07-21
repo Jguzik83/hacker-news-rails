@@ -1,12 +1,14 @@
 <div id='log_sign'>
+<!-- You should move this to a parital, then render in in the layout. -->
   <div class='bad_error'>
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: name %>
     <% end %>
   </div>
+
   <div id='log_in_form'>
     <h1>Log In</h1>
-
+    <!-- could have just used a from tag, that way you don't need to create an empty user in your controller -->
       <%= form_for @user, url: login_path, method: 'post' do |f| %>
         <div>
           <%= f.label :username %>
@@ -24,10 +26,9 @@
 
   <%= link_to 'Forgot Your Password?', root_path %>
 
-
   <div id='sign_up_form'>
     <h1>Create Account</h1>
-
+    <!-- Div formatting is wrong here, your form is goig to end at username -->
     <div>
       <%= form_for @user, url: users_path, method: 'post' do |f| %>
       <%= f.label :username %>

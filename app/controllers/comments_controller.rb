@@ -19,6 +19,9 @@ class CommentsController < ApplicationController
   def create
     comment = Comment.new(comment_params)
     @post = Post.find(params[:comment][:post_id])
+    #ZM: YOu are doing an extra DB Hit to make this happen. 
+    # Instead use set the post_id.
+    # comment.post_id = params[:comment][:post_id]
     comment.post = @post
     if comment.save
       redirect_to root_path
